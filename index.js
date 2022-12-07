@@ -1,5 +1,10 @@
 const { Client, GatewayIntentBits } = require('discord.js');
 
+const APP_ID = process.env['APP_ID']
+const GUILD_ID = process.env['GUILD_ID']
+const DISCORD_TOKEN = process.env['DISCORD_TOKEN']
+const PUBLIC_KEY = process.env['PUBLIC_KEY']
+
 const client = new Client({
 	intents: [
 		GatewayIntentBits.Guilds,
@@ -20,4 +25,4 @@ client.on('message', msg => {
   }
 });
 
-client.login("MTA0OTgzMTg3ODA4Mjk2MTQ0OQ.GYYqgY._5C_463fxmPKoVzInEjsAcurchg2TlADI-pSBA");
+client.login(DISCORD_TOKEN);
